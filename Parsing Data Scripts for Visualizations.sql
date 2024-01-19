@@ -37,7 +37,7 @@ SELECT
   IFF(SENTIMENT_MAP:negative IS NULL, 0, SENTIMENT_MAP:negative::INT) AS negative_sentiment,
   IFF(SENTIMENT_MAP:neutral IS NULL, 0, SENTIMENT_MAP:neutral::INT) AS neutral_sentiment
 FROM 
-  "DATA_228_PROJECT"."YELP"."USERS",
+  "Data_PROJECT"."YELP"."USERS",
   LATERAL FLATTEN(input => SENTIMENT_MAP)
 
 #Custom SQL Query2:
@@ -48,7 +48,7 @@ SELECT
   CATEGORY.key AS Category_Name,
   CATEGORY.value::INTEGER AS Category_Count
 FROM 
-  "DATA_228_PROJECT"."YELP"."USERS",
+  "Data_PROJECT"."YELP"."USERS",
   LATERAL FLATTEN(input => CATEGORY_MAP) AS CATEGORY
 
 #Custom SQL Query 3:

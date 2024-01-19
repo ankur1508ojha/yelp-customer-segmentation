@@ -2,8 +2,11 @@
 # Customer Segmentation using Yelp Reviews Data
 ## Project Overview
 ### This project focuses on developing a robust customer segmentation framework using Yelp's extensive reviews database. It involves processing raw data, implementing real-time data streaming, executing sentiment analysis, and aggregating various features to create a multidimensional customer dataset.
- # Key Features
-    #Segmentation Data Cube
+ 
+ 
+ # Key Features : 
+ 
+   # Segmentation Data Cube
     Utilized the Yelp Review Dataset to build a data cube that includes both behavioral and predictive attributes of customers.
     This segmentation helps in categorizing customers based on their interactions and preferences.
     

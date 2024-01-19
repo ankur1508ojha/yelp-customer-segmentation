@@ -131,14 +131,14 @@ pip install snowflake-snowpark
 account_url = "https://fx34478.us-central1.gcp.snowflakecomputing.com"
 organization = "ESODLJG"
 account = "RU55705"
-email = "data228.project@gmail.com"
+email = "data.project@gmail.com"
 
 snowflake_options = {
     "sfURL": "https://fx34478.us-central1.gcp.snowflakecomputing.com",
-    "sfUser": "DATA228PROJECT",
+    "sfUser": "DATA_PROJECT",
     "sfPassword": "Project228",
     "sfWarehouse": "COMPUTE_WH",
-    "sfDatabase": "data_228_project",
+    "sfDatabase": "data_project",
     "sfSchema": "yelp",
     "sfTable": "test",
     "dbtable": "test"

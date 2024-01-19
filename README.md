@@ -1,6 +1,6 @@
 
 # Customer Segmentation using Yelp Reviews Data
-## Project Overview
+### Project Overview
 ### This project focuses on developing a robust customer segmentation framework using Yelp's extensive reviews database. It involves processing raw data, implementing real-time data streaming, executing sentiment analysis, and aggregating various features to create a multidimensional customer dataset.
  
  
@@ -47,54 +47,53 @@
 
 
 # Detailed Steps
- ## Step 1:
-   ### Data Processing (data_processing.py)
+ ### Step 1  Data Processing (data_processing.py)
     User and Business Data Loading
     Load and process registered users and business entities.
     Partial loading of streaming datasets for base data creation.
     Reviews, check-ins, and tips are processed as streams.
     
-  #### Data Transformations
+    Data Transformations
     User data is transformed by converting dates to timestamps and splitting the elite column into an array.
     Business data undergoes transformations like converting categories and attributes columns into arrays.
     
-## Step 2: Sentiment Analysis (sentiment.py)
+### Step 2: Sentiment Analysis (sentiment.py)
     NLTK for Natural Language Processing
     Utilize NLTK's SentimentIntensityAnalyzer for determining the sentiment of review texts.
     Tokenization and frequency analysis of words to identify key terms used in reviews.
     
-## Step 3: Streaming Data Ingestion (data_ingestion.py)
+### Step 3: Streaming Data Ingestion (data_ingestion.py)
     Kafka Streaming Integration
     Setup of Kafka consumers to ingest review, tip, and check-in data.
     Data batches are read from Kafka topics and written to Parquet files after processing.
-## Step 4: Business Attributes (attributes/business.py)
+### Step 4: Business Attributes (attributes/business.py)
     Extraction of Business Features
     Derive attributes like user visit frequency to various business categories and preferences.
     Geographical data extraction to identify user locations and popular destinations.
     
-## Step 5: Review Attributes (attributes/review.py)
+### Step 5: Review Attributes (attributes/review.py)
     Analyzing Review Content
     Count and analyze sentiments expressed in reviews.
     Identify and count the most frequent words in reviews for deeper insights.
     
-## Step 6: User Attributes (attributes/users_agg.py)
+### Step 6: User Attributes (attributes/users_agg.py)
     User Profile Aggregation
     Aggregate data to compute average ratings, visit frequencies, and other user-centric metrics.
     Calculate user inactivity periods and diversity in business visits.
     
-## Step 7: Feature Aggregation (feature_aggregator.py)
+### Step 7: Feature Aggregation (feature_aggregator.py)
     Combining All Features
     Merge attributes from user, business, and review datasets.
     Create a multi-dimensional table capturing various aspects of user behavior and preferences.
     
-## Execution and Deployment
+### Execution and Deployment
     Initialization: Setup of Spark sessions and data paths.
     Sequential Processing: Execute scripts in order for data processing and analysis.
     Final Aggregation: Compile the final dataset with aggregated features.
     Output Generation: Store data in Parquet format for efficient access.
     
     
-## Technologies Used
+### Technologies Used
     PySpark: For distributed data processing.
     Apache Kafka: For real-time data streaming.
     NLTK: For natural language processing.

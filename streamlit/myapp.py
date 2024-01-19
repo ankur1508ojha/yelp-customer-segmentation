@@ -14,13 +14,13 @@ from lib.filterwidget import MyFilter
 account_url = "https://fx34478.us-central1.gcp.snowflakecomputing.com"
 organization = "ESODLJG"
 account = "RU55705"
-email = "data228.project@gmail.com"
+email = "data.project@gmail.com"
 
 connection_parameters = {
     "account": "ESODLJG-RU55705",
-    "user": "DATA228PROJECT",
-    "password": "Project228",
-    "database": "data_228_project",  # optional
+    "user": "DATAPROJECT",
+    "password": "Project",
+    "database": "data_project",  # optional
     "schema": "yelp",  # optional
 }
 

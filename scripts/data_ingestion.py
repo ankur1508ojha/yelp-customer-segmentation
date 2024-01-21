@@ -36,9 +36,8 @@ class Consumer:
             .option("subscribe", topic)
             .load()
         )
-       
-	
-	print(f"is spark is reading the streams from kafka = {df.isStreaming}")
+
+        print(f"is spark is reading the streams from kafka = {df.isStreaming}")
         df.printSchema()
         return df.withColumn("json_string", col("value").cast(StringType()))
 
@@ -102,6 +101,7 @@ class Consumer:
 
         As this is a generic method, it will be called for each batch, and more and more functionality can be added to it.
         """
+        topicName = "reviews"
         sampled_users, is_sampled = get_sampled_users_data(spark, sample)
         if is_sampled:
             print("got sampled users ... processing that.")
@@ -115,6 +115,7 @@ class Consumer:
             .withColumn("frequent_words", tokenize_and_get_top_words(col("text")))
 
         review_df.printSchema()
+        # self.write_stream(review_df, topicName)
         review_df.repartition(1).write.mode("append").parquet(f"{sample_output_path(sample)}/review")
         print("sample review ares = ", review_df.count())
         return review_df
@@ -159,8 +160,8 @@ if __name__ == "__main__":
         spark = init_spark()
         consumer = Consumer(server, output_path)
         consumer.read_reviews(spark)
-        consumer.read_tips(spark)
-        consumer.read_checkins(spark)
+        # consumer.read_tips(spark)
+        # consumer.read_checkins(spark)
         spark.stop()
     else:
         print("Invalid number of arguments. Please pass the server and topic name")

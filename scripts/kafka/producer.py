@@ -28,7 +28,7 @@ class Producer:
                 if i % 2 == 0:
                     time.sleep(2)
 
-                if i >= index+10:
+                if i >= index+10000:
                     break
 
 

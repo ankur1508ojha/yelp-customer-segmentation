@@ -37,4 +37,4 @@ def most_frequent_words(review_df):
         .withColumn("frequent_words_map", merge_maps_array(col("frequent_words_map")))
 
 
-a
+

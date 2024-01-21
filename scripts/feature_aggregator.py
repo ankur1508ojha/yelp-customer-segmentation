@@ -55,15 +55,5 @@ if __name__ == "__main__":
     sample = float(sys.argv[1])
     sparkSession = init_spark()
     merged_df = merge_attributes(sparkSession, sample)
-    save_spark_df_to_db(merged_df, "users")
+    # save_spark_df_to_db(merged_df, "users")
     sparkSession.stop()
-
-
-cd ~/scripts
-
-
-python3 kafka/producer.py localhost:9092 reviews /home/ubuntu/yelp_academic_dataset_review_test.json 500
-
-python3 data_ingestion.py localhost:9092 reviews s3a://yelp-data-segmentation/output/ 0.001
-
-python3 feature_aggregator.py 0.001

@@ -25,8 +25,11 @@ class Producer:
                     continue
 
                 self.publish(message)
-                if i % 10 == 0:
+                if i % 2 == 0:
                     time.sleep(2)
+
+                if i >= index+10:
+                    break
 
 
 if __name__ == "__main__":
@@ -40,4 +43,3 @@ if __name__ == "__main__":
     else:
         print("Insufficient arguments. Usage: python producer.py <server> <topic> <file_path> <so_far_completed>")
 #%%
-9

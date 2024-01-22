@@ -25,8 +25,8 @@ class Producer:
                     continue
 
                 self.publish(message)
-                if i % 2 == 0:
-                    time.sleep(2)
+                if i % 1000 == 0:
+                    time.sleep(1)
 
                 if i >= index+10000:
                     break

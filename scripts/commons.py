@@ -37,8 +37,8 @@ def init_spark():
     return spark
 
 
-baseInputPath = "/Users/hims/Downloads/yelp_dataset/"
-baseOutputPath = "/Users/hims/Downloads/yelp_dataset/output/"
+baseInputPath = "/Users/ankur/data_engineering/yelp_dataset/"
+baseOutputPath = "/Users/ankur/data_engineering/yelp_dataset/output/"
 env = "local"
 
 if env == "aws":

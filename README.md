@@ -31,10 +31,13 @@
 
 
 # System Architecture and Workflow
+
+![](<img width="1380" alt="Screenshot 2024-01-27 at 3 53 47 PM" src="https://github.com/ankur1508ojha/yelp-customer-segmentation/assets/102976689/07b9306a-372d-4c1b-bce4-50e8831e81ee">)
  ###  Initial Data Setup
     Data is sourced from Yelp's dataset, which includes users, businesses, reviews, check-ins, and tips.
  ###   Data Processing and Transformation
     The raw data undergoes extraction and transformation to derive meaningful insights and features.
+
     
  ###    Real-Time Data Streaming
     Kafka is used to ingest real-time data, ensuring the dataset is dynamically updated.

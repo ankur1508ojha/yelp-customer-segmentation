@@ -140,7 +140,7 @@ email = "data.project@gmail.com"
 snowflake_options = {
     "sfURL": "https://fx34478.us-central1.gcp.snowflakecomputing.com",
     "sfUser": "DATA_PROJECT",
-    "sfPassword": "Project228",
+    "sfPassword": "Project",
     "sfWarehouse": "COMPUTE_WH",
     "sfDatabase": "data_project",
     "sfSchema": "yelp",
